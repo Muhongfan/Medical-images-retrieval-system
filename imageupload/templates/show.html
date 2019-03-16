@@ -1,0 +1,204 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+    body{
+        background-color:ghostwhite;
+        font-family: "Heiti SC";
+        color:gray;
+
+    }
+
+
+    .banner{
+        height:20px;
+        width: 350px;
+        margin-left: auto;
+        margin-top:20px;
+        margin-right: auto;
+        text-align: center;
+        font-size: 16px;
+		<!--border:2px solid #434A52;-->
+    }
+
+    .all_func{
+        margin-top: 10px;
+        height: 90%;
+        width: auto;
+        padding: 2px;
+       <!-- border:2px solid #434A52;-->
+
+
+
+    }
+    .left_func{
+        margin-left: 5%;
+        margin-top: 6%;
+        position: absolute;
+        height: 50%;
+        width: 18%;
+       <!-- border:2px solid #434A52;-->
+    }
+    p{
+        margin-top:0px;
+    }
+    .dif_func{
+
+        height: 25px;
+        width: 100px;
+        margin-top: 10px;
+        margin-left: 12%;
+        <!--border:2px solid #434A52;-->
+        <!--padding: 2px 2px 2px 1px;-->
+    }
+
+    .right_func {
+        position: absolute;
+        margin-left: 20%;
+        margin-top:0px;
+        height: 90%;
+        width: 77%;
+        <!--border:2px solid #434A52;-->
+
+    }
+    .ori_pic{
+
+        height: 90%;
+        width: 45%;
+        margin-top: 80px;
+        margin-left: 10px;
+        padding: 0px 2px 2px 2px;
+        <!--border:2px solid #434A52;-->
+    }
+     .out_pic{
+         position: absolute;
+         height: 99%;
+         width: 48%;
+         margin-top: -660px;
+         margin-left: 48%;
+         <!--border:2px solid #434A52;-->
+         <!-- padding: 2px 2px 2px 20px;-->
+    }
+     .slp{
+
+         <!--border:2px solid #434A52;-->
+         width: 100%;
+         height:33%
+
+     }
+     img{
+         height: 440px;
+         width: 440px;
+         padding: 0px 2px 2px 0px;
+         <!--border:2px solid #434A52;-->
+     }
+     .arr_ul{
+         height: 60px;
+         width: 180px;
+         margin-top: -50px;
+         margin-left: 190px;
+         padding: 0px 2px 2px 2px;
+        <!-- border:2px solid #434A52;-->
+     }
+    ul{
+        font-family: "Heiti SC";
+        font-size: 14px;
+        height: 13px;
+        width: 300px;
+        padding-top: 0px;
+        padding-left: -20px;
+       <!-- border: 2px solid black;-->
+
+    }
+
+</style>
+<body>
+    <div class="banner">基于深度学习的脑出血图像检索系统</div>
+
+    <div class="all_func">
+
+        <div class="left_func">
+            <form method="post" enctype="multipart/form-data">
+                <div class="dif_func">
+                    {% csrf_token %}
+                    <input type="file" name = "image" id="id_image" required>
+                </div>
+                <div class="dif_func">
+                    <input type="submit" value="检索图像" />
+                </div>
+            </form>
+
+
+            <!--
+            <div class="dif_func">
+                <button>特征提取</button>
+            </div>
+          <!--  <div class="dif_func">
+                <button>训练网络</button>
+            </div>
+            <div class="dif_func">
+                <button>添加图片</button>
+            </div>
+            <div class="dif_func">
+                <button>退出系统</button>
+            </div>
+            -->
+
+
+        </div>
+
+
+        <div class="right_func">
+            <div>
+                <div class="ori_pic">
+                    <div>
+                        <img src="{{ picture.photo.url }}">
+                    </div>
+                    <br>
+                    <ul style="margin-left:10%">Name: {{ picture.photo.name }}</ul>
+
+                </div>
+            </div>
+
+
+            <div>
+                <div class="out_pic">
+                    <div class="slp" >
+                        <img  src="/static/images/{{ dict.0.0 }}" style= "height: 200px; width: 200px;">
+                        <div class="arr_ul">
+                            <ul>Name: {{ dict.0.0 }}</ul>
+                            <ul style="margin-top:-10px ;padding-top: 2px;">Accuracy: {{ dict.0.1 }}</ul>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="slp" style="margin-top: -30px">
+                        <img src="/static/images/{{ dict.1.0 }}" style="height: 200px; width: 200px;">
+                        <div class="arr_ul">
+                            <ul >Name: {{ dict.1.0 }}</ul>
+                            <ul style="margin-top:-10px ;padding-top: 2px;">Accuracy: {{ dict.1.1 }}</ul>
+                        </div>
+                    </div>
+                     <br>
+                    <br>
+                    <div class="slp" style="margin-top: -30px">
+                        <img src="/static/images/{{ dict.2.0 }}" style="height: 200px; width: 200px;">
+                        <div class="arr_ul" >
+                            <ul >Name:{{ dict.2.0 }}</ul>
+                            <ul style="margin-top:-10px ;padding-top: 2px;">Accuracy: {{ dict.2.1 }}</ul>
+                        </div>v
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+
+
+
+<!--重新测试
+<a href="{% url 'index' %}">Agian?</a>-->
+
