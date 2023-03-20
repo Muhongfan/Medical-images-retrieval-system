@@ -8,4 +8,6 @@ With the rapid development of medical technology, efficient and well-organized m
 
 Key words： convolutional neural network, Intracerebral hemorrhage CT image, image retrieval, K-means clustering method, Image binarization
 
+Slides for presentation: https://drive.google.com/file/d/1wRwm8fQhdPXRxOZTHhLGAAtGqhw0tRCF/view?usp=sharing
+
 
