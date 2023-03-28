@@ -6,9 +6,9 @@ With the rapid development of medical technology, efficient and well-organized m
   3. Using convolutional neural networks to extract typical cerebral hemorrhage lesion area features from the pre-processed cerebral hemorrhage CT images.
   4. Designing and implementing a web-based cerebral hemorrhage image retrieval system based on Django framework.
   
-![Modeling Design](Modeling\ Design.png)
+![Modeling Design](Modeling_Design.png)
 
-![System Design](System Design.png)
+![System Design](System_Design.png)
 
 Key words： convolutional neural network, Intracerebral hemorrhage CT image, image retrieval, K-means clustering method, Image binarization
 
